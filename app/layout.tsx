@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
+
 export const metadata: Metadata = {
- title: "CTK46 - Lab 01",
- description: "Bài thực hành 1 - Các công nghệ mới trong PTPM",
+ title: "Portfolio — Lý Gia Bảo",
+ description: "Website portfolio cá nhân của Lý Gia Bảo — CTK46",
 };
+
 export default function RootLayout({
  children,
 }: Readonly<{
- children: React.ReactNode;
+ children: ReactNode;
 }>) {
  return (
  <html lang="vi">
- <body>{children}</body>
+ <body className="min-h-screen flex flex-col">{children}</body>
  </html>
  );
 }
